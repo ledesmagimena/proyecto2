@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(
+    circle,
+    #373436,
+    #3d3a3d,
+    #434144,
+    #48484c,
+    #4e4f53,
+    #595b5f,
+    #64676c,
+    #6f7478,
+    #838a8d,
+    #98a0a3,
+    #adb8b8,
+    #c4cfce
+  );
+}
+
+main {
+  max-width: 800px;
+  width: 90%;
+  margin: auto;
+  padding: 40px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.formlabel {
+  display: block;
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.formgrupoinput {
+  position: relative;
+}
+
+.forminput {
+  width: 100%;
+  background: #fff;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  transition: 0.3s ease all;
+}
+
+.forminput:focus {
+  border: 3px solid #262729;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.forminputerror {
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
+}
+
+.forminputerroractivo {
+  display: block;
+}
+
+.formvalidacionestado {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.formcheckbox {
+  margin-right: 10px;
+}
+
+/*.formgrupoterminos,
+.formmensaje,
+.formgrupobtnenviar {
+  gridcolumn: span 1;
+}*/
+
+.formmensajerror {
+  height: 45px;
+  line-height: 45px;
+  background: #f66060;
+  padding: 0 15px;
+  border-radius: 3px;
+  display: none;
+}
+
+.formmensajeactivo {
+  display: block;
+}
+
+.formmensajerror p {
+  margin: 0;
+}
+
+.formgrupobtnenviar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formbtn {
+  cursor: notallowed;
+  opacity: 50%;
+  height: 45px;
+  line-height: 45px;
+  width: 30%;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.1s ease all;
+}
+
+.formbtn:hover {
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+}
+
+.formmensajexito {
+  height: 45px;
+  line-height: 45px;
+  background: #119200;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-size: 20px;
+  margin-top: 10px;
+  display: none;
+}
+
+.formmensajexitoactivo {
+  display: block;
+}
+
+/*    Estilos para Validacion   */
+.formgrupocorrecto .formvalidacionestado {
+  color: #1ed12d;
+  opacity: 1;
+}
+
+.formgrupoincorrecto .formlabel {
+  color: #bb2929;
+}
+
+.formgrupoincorrecto .formvalidacionestado {
+  color: #bb2929;
+  opacity: 1;
+}
+
+.formgrupoincorrecto .forminput {
+  border: 3px solid #bb2929;
+}
+
+/*    Mediaqueries   */
+@media screen and (maxwidth: 800px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .formgrupoterminos,
+  .formmensaje,
+  .formgrupobtnenviar {
+    grid-column: 1;
+  }
+
+  .formbtn {
+    width: 100%;
+  }
+  .Error {
+    font-size: 9px;
+  }
+}
+/*modal*/
+.flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.texto {
+  text-align: center;
+}
+.a {
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  display: inline-block;
+  padding: 8px;
+  width: 181px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+}
+.a:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.452);
+}
+.contenidoModal {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
+  animation-name: modal;
+  animation-duration: 1s;
+}
+@keyframes modal {
+  from {
+    top: -330px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.close {
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: bold;
+}
+.close:hover {
+  color: #7f8c8d;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-header {
+  padding: 8px 16px;
+  background: #34495e;
+  color: #f2f2f2;
+}
+.p {
+  text-align: justify;
+}
+.modal-body {
+  padding: 20px 16px;
+}
+.inputcontra {
+  margin-top: 10px;
+  margin-left: 25%;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+}

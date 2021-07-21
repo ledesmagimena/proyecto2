@@ -1,0 +1,69 @@
+.fondo{
+  font-family: 'Open Sans', sans-serif;
+background-image: linear-gradient(to right top, #040303, #1D0908, #2D0E0C, #3D0D0E, #4E0C0E, #5D0C10, #6C0C11, #7B0B11, #8D0D15, #9F0E19
+, #B1101E, #C41122);
+}
+
+.overlay {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    
+}
+.titulo_h3_slider{
+  margin-top: 30px;
+  font-size:30px;
+  font-weight:bold ;
+}
+.parrafo_slider{
+  font-size:15px;
+}
+.franja{
+  background-color:#1f0504;
+}
+hr{
+  border-top: 1px solid #d12929;
+}
+
+.lista_juegos{
+  width: 120px;
+  height: 140px;
+}
+
+/*************************MEDIA QUERIS***********************************************/
+
+ @media(max-width:580px){
+       .titulo_h3_slider{
+        font-size:20px;
+  }
+  .boton_slider{
+    width: 50px;
+    height: 26px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .iconos{
+    width: 129px;
+    height: 18px;
+    font-size: 11px;
+  }
+} 
+
+
+
+@media(max-width:450px){
+  .botones{
+    display: none;
+  }
+  .titulo_h3_slider{
+        margin-bottom: 0px;
+        margin-left: -35px;
+  }
+  .iconos{
+    margin-left: -20px;
+  }
+}

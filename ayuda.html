@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./hernan.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/a49c7a1422.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="header"></header>
+    <main>
+      <div class="text-center mt-4 mx-1">
+        <h2>¿Como descragar? <i class="fas fa-download"></i></h2>
+        <p class="">
+          Para poder descargar un juego deberas hacer click en el boton
+          descargar, que aparecera abajo de la descripcion, ahi te indicara los
+          servidores disponibles
+        </p>
+        <h2 class="mt-4">
+          ¿Como descomprimir? <i class="far fa-file-archive"></i>
+        </h2>
+        <p>
+          Los archivos están comprimidos en formato rar para efectuar la
+          extracción del juego debes usar un programa llamado WinRaR, lo puedes
+          Encontrar <a href="#">Aquí.</a>
+        </p>
+        <h2 class="mt-4">
+          Contraseña para descomprimir el juego
+          <i class="fas fa-unlock-alt"></i>
+        </h2>
+        <p>RollingCode2021_Comision_10-i</p>
+        <h2 class="mt-4">
+          Posibles errores al descomprimir el juego <i class="fas fa-times"></i>
+        </h2>
+        <ul class="list-unstyled">
+          <li>El archivo está dañado o contraseña incorrecta.</li>
+          <li>
+            Error de CRC en el archivo codificado… ¿Contraseña Incorrecta?
+          </li>
+          <li>Final Inesperado del archivo.</li>
+        </ul>
+        <h2 class="mt-4">
+          El archivo está dañado o corrupto obtenga una nueva copia
+          <i class="fas fa-file-medical"></i>
+        </h2>
+        <p>
+          Aveces las descargas se cortan haciendo que el archivo no se descargue
+          bien, solo vuelve a descargarlo
+        </p>
+        <h2 class="mt-4">
+          Tengo un error al instalar un juego (Error CRC, IsDone.dll, etc..)
+          <i class="fas fa-exclamation-circle"></i>
+        </h2>
+        <p>Para ver la solución a este error haga Click <a href="#">Aquí</a></p>
+        <h2 class="mt-4">
+          Mi antivirus detecto un archivo como virus <i class="fas fa-bug"></i>
+        </h2>
+        <p>
+          En algunas ocasiones algunos antivirus detectan algunos archivos
+          (juegos) como amenazas (virus), esto ocurre por un convenio que tienen
+          las empresas de videojuegos y las empresas de antivirus, dando así que
+          los antivirus detecten medicinas/cracks o los mismos juegos como
+          amenazas para así evitar que se comparta.En estos casos puedes
+          desactivar el antivirus temporalmente en lo que instalas el juego.
+        </p>
+        <h2 class="mt-4">
+          Como se si un juego funcionará en mi PC <i class="fas fa-laptop"></i>
+        </h2>
+        <p>
+          Cada videojuego que tenemos en nuestra pagina trae los requerimientos
+          para su funcionalidad, debe ver si cumple dichos requisitos, pero en
+          caso de no saber de esto le recomendamos usar la siguiente<a
+            href="#"
+          ></a>
+          pagina.
+        </p>
+        <h2 class="mt-4">
+          Tengo un problema «.dll» ¿Que hago? <i class="fas fa-file-code"></i>
+        </h2>
+        <p>
+          Si tiene algún problema de “.dll” pásese por DLL-Files.com y descargue
+          la que necesite
+        </p>
+        <h2 class="mt-4">
+          Un juego me pide que instale Direct X ¿Que hago?
+          <i class="fas fa-file-import"></i>
+        </h2>
+        <p>
+          El DirectX lo puede descargar desde su pagina
+          <a href="#"></a> oficial.
+        </p>
+      </div>
+      <div class="container">
+        <div class="ayuda"></div>
+        <h3 class="my-5">Comentarios</h3>
+        <form id="formulario">
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >Usuario</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                placeholder="usuario"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label"
+              >Comentario</label
+            >
+            <div class="col-sm-10" id="container_coment">
+              <textarea
+                class="form-control"
+                aria-label="With textarea"
+                id="textarea"
+                placeholder="Comentario"
+              ></textarea>
+              <div id="resultado"></div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary" id="enviar">
+                Enviar
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="mt-4" id="help_coments"></div>
+      </div>
+    </main>
+    <footer id="footer"></footer>
+    <script src="./js/ayuda.js" type="module"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
